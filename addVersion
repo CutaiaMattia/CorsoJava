@@ -1,0 +1,17 @@
+void findSymbol(String es) {
+        int k = 0;
+        int k1 = 0;
+        for (int i = 0; i < es.length(); i++) {
+            char[] fraseSenzaSpazi = new char[es.length() - k];
+            if ((65 <= (char) es.charAt(i)) && ((char) es.charAt(i) <= 90)
+                    || (97 <= (char) es.charAt(i)) && ((char) es.charAt(i) <= 122)) {
+                k1 += 1;
+            } else {
+                k += 1;
+                int[] posSymbol = new int[k];
+                posSymbol[i - k1] = es.charAt(i);
+                System.out.print(" \"" + es.charAt(i) + " \"" + " ");
+                System.out.println(posSymbol[i - k1]);
+            }
+        }
+    }
