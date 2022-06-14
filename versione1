@@ -1,0 +1,11 @@
+ void extractCharacter(String es) {
+        char[] fraseScomposta = new char[es.length()];
+        int[] posLettera = new int[es.length()];
+        for (int i = 0; i < es.length(); i++) {
+            fraseScomposta[i] = es.charAt(i);
+            posLettera[i] = i;
+            System.out.print(fraseScomposta[i] + " ");
+            System.out.print(posLettera[i] + " ");
+            System.out.println();
+        }
+    }
